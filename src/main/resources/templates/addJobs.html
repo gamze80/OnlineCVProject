@@ -34,57 +34,6 @@
             <form action="#" th:action="@{/cvs/add}" th:object="${cv}" method="post"
                   class="needs-validation" novalidate>
 
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="jobTitle">Job Title</label>
-                        <input th:field="*{jobTitle}" type="text" class="form-control" id="jobTitle" placeholder=""
-                               value=""
-                               required>
-                        <div class="invalid-feedback">
-                            Valid title is required.
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="jobDescription">Job Description</label>
-                        <input th:field="*{jobDescription}" type="text" class="form-control" id="jobDescription"
-                               placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                            Valid description is required.
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="jobLocation">Job Location</label>
-                        <input th:field="*{jobLocation}" type="text" class="form-control" id="jobLocation"
-                               placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                            Valid description is required.
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="jobType">Job Type</label>
-                        <input th:field="*{jobType}" type="text" class="form-control" id="jobType"
-                               placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                            Valid description is required.
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <label for="salary">Salary</label>
-                        <input th:field="*{jobSalary}" type="text" class="form-control" id="salary"
-                               placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                            Valid description is required.
-                        </div>
-                    </div>
-
-                    <hr class="mb-4">
-                    <div th:if="${#fields.hasAnyErrors()}">
-                        <ul>
-                            <li th:each="err : ${#fields.allErrors()}" th:text="${err}"/>
-                        </ul>
-                    </div>
-
                     <button class="btn btn-primary btn-lg btn-block" type="submit">Add Job</button>
                 </div>
             </form>
